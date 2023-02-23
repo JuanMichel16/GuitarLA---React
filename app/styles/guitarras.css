@@ -1,0 +1,82 @@
+.guitarras-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+}
+
+@media (min-width: 768px) {
+    .guitarras-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .guitarras-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+
+
+/* Este codigo css lo hice antes de ver el codigo del profesor, sin embargo, lo removi para que coincidiera con el del video para poder resolver problemas mas rapido
+
+@media (min-width: 768px) {
+    .guitarra {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+} */
+
+.guitarra {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 1rem;
+    align-items: center;
+    max-width: 70rem;
+    margin: 0 auto;
+}
+
+.guitarra .contenido {
+    padding: 1rem;
+}
+
+.guitarra .contenido h3 {
+    font-size: 3rem;
+    color: var(--primary);
+    text-transform: uppercase;
+}
+
+/* .titulo {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 35px;
+    text-transform: uppercase;
+    margin: 3rem 0;
+} */
+
+
+/* Tecnica para ocultar texto y mostrar cierto numero de lineas */
+.guitarra .descripcion {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 7;
+    overflow: hidden;
+    font-size: 1.8rem;
+}
+
+/* @media (min-width: 768px) {
+    .descripcion {
+        font-weight: 600;
+        margin: 0;
+    }     
+} */
+
+.guitarra .precio {
+    color: var(--primary);
+    font-weight: 900;
+    font-size: 3rem;
+    margin: 0;
+}
